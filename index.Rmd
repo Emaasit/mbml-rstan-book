@@ -15,19 +15,41 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
+twitter-handle: emaasit
+cover-image: figures/crane.jpg
+description: ""
+github-repo: Emaasit/mbml-rstan-book
+url: 'https://github.com/Emaasit/mbml-rstan-book'
 ---
 
-# Prerequisites
+# Welcome {-}
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+<img src="figures/crane.jpg" width="311" height="162" alt="figures/crane.jpg" />
 
-For now, you have to install the development versions of **bookdown**, **rmarkdown**, and **knitr**:
+This is the [online version](https://csgillespie.github.io/mbml-rstan-book/) of the book: [Model-Based Machine Learning and Probabilistic Programming using RStan](). Pull requests and general comments are welcome.
 
-```{r eval=FALSE}
-install.packages(
-  c("bookdown", "knitr"),
-  repos = c("http://yihui.name/xran", "http://cran.rstudio.com")
-)
-```
+To build the book:
 
-Remember each Rmd file contains one and only one chapter.
+1. Install the latest version of R
+    * If you are using RStudio, make sure that's up-to-date as well
+1. Install the book dependencies.
+    ```{r eval=FALSE}
+    # Make sure you are using the latest version of `devtools`
+    # Older versions do not work.
+    devtools::install_github("emaasit/mbml-rstan-book")
+    ```
+1. Clone the mbml-rstan-book [repo](https://github.com/Emaasit/mbml-rstan-book)
+1. If you are using `RStudio`, open `index.Rmd` and click `Knit`.
+    * Alternatively, use the bundled `Makefile`
+
+## Author {-}
+
+[Daniel Emaasit](http://www.mas.ncl.ac.uk/~ncsg3/) is a Ph.D Student of Transportation Engineering at UNLV, where his research interests involve the development of probabilistic machine learning methods for high-dimensional data, with applications to urban mobility, transport planning, highway safety, & traffic operations.
+
+He is also a Research Intern at IBM Research - Africa, an organizer of several Data Science and R Meetup groups and actively contributes to open-source technologies in the R community.
+
+This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/us/) United States License. 
+
+# Preface {-}
+
+*Model-Based Machine Learning and Probabilistic Programming using RStan* is about increasing the amount of work you can do with R in a given amount of time. It's about both *computational* and *programmer* efficiency. There are many excellent R resources about topic areas such as visualisation [e.g. @chang2012r], data science [e.g. @grolemund_r_2016] and package development [e.g. @Wickham_2015]. There are even more resources on how to use R in particular domains, including Bayesian Statistics, Machine Learning and Geographic Information Systems. However, there are very few unified resources on how to simply make R work effectively. Hints, tips and decades of community knowledge on the subject are scattered across hundreds of internet pages, email threads and discussion forums, making it challenging for R users to understand how to write efficient code.
